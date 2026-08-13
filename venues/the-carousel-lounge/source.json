@@ -1,0 +1,12 @@
+{
+	"slug": "the-carousel-lounge",
+	"name": "The Carousel Lounge",
+	"calendar_url": "https://carousellounge.com/elementor-1022/",
+	"website_url": null,
+	"platform_type": "tec",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-carousel-lounge.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-carousel-lounge.mjs"
+	]
+}

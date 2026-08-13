@@ -1,12 +1,15 @@
 # Pilot venues (handoff catalog)
 
-The HeyAustin **venues table is not in this package**. What shipped is:
+**Open [`venues/`](../venues/).** That is the packaged delivery: one folder per slug with `source.json` + README.
 
-1. **Platform adapters** in `engine/src/lib/sources/` (the scrapers).
-2. **Per-venue pilot scripts** in `engine/scripts/` (how each venue was wired).
-3. **Machine catalog** at [`examples/venues/catalog.json`](../examples/venues/catalog.json) — slug, calendar URL, `platform_type`, script.
+The HeyAustin **venues table dump is not in this package**. What shipped is:
 
-Poodie's is the only venue with a standalone packet (`examples/venues/poodies-hilltop/`). Every other venue was driven by a named `pilot-*.mjs` (or a batch/repilot script) against Supabase.
+1. **Venue folders** in `venues/<slug>/` (calendar URL, platform, how to run).
+2. **Platform adapters** in `engine/src/lib/sources/` (the scrapers).
+3. **Pilot scripts** in `engine/scripts/` (how each venue was wired).
+4. **Machine catalog** at [`venues/catalog.json`](../venues/catalog.json).
+
+Poodie's is the only venue with a standalone scrape packet (`venues/poodie-s-hilltop-roadhouse/`). Every other venue was driven by a named `pilot-*.mjs` (or a batch/repilot script) against Supabase.
 
 ## How the scripts work
 
@@ -16,7 +19,7 @@ Most pilots:
 2. Write `venues.calendar_url` + a `venue_event_sources` row (`platform_type`, feed/calendar URL).
 3. Call the ingestion worker (`/ingest` or `/test-source`) **or** scrape locally and stage `ingested_events`.
 
-Without a `venues` row they exit `Venue not found`. Reseed from `catalog.json`, then run the script.
+Without a `venues` row they exit `Venue not found`. Reseed from `venues/<slug>/source.json`, then run the script.
 
 Run from `engine/` (scripts that read `./.dev.vars` assume that cwd):
 

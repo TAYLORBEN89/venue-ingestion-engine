@@ -1,0 +1,13 @@
+{
+	"slug": "speakeasy",
+	"name": "Speakeasy",
+	"calendar_url": "https://speakeasyaustin.com/calendar/",
+	"website_url": null,
+	"platform_type": "eventon",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-speakeasy.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-speakeasy.mjs",
+		"engine/scripts/smoke-eventon-speakeasy.mjs"
+	]
+}

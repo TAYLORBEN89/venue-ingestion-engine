@@ -1,0 +1,14 @@
+{
+	"slug": "stubb-s-bbq",
+	"name": "Stubb's BBQ",
+	"calendar_url": null,
+	"website_url": null,
+	"platform_type": null,
+	"timezone": "America/Chicago",
+	"script": null,
+	"related_scripts": [
+		"engine/scripts/probe-stubbs.mjs",
+		"engine/scripts/test-stubbs-discovery.mjs"
+	],
+	"notes": "Completed pilot; probe-stubbs.mjs / test-stubbs-discovery.mjs"
+}

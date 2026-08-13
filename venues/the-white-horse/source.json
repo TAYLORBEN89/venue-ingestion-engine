@@ -1,0 +1,12 @@
+{
+	"slug": "the-white-horse",
+	"name": "The White Horse",
+	"calendar_url": "https://thewhitehorseaustin.com/events",
+	"website_url": "https://thewhitehorseaustin.com/",
+	"platform_type": "wix_events",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-batch-round2.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-batch-round2.mjs"
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"slug": "antones-nightclub",
+	"name": "Antone's Nightclub",
+	"calendar_url": null,
+	"website_url": null,
+	"platform_type": null,
+	"timezone": "America/Chicago",
+	"script": null,
+	"related_scripts": [
+		"engine/scripts/inspect-antones.mjs",
+		"engine/scripts/probe-antones-api.mjs"
+	],
+	"notes": "Completed pilot; inspect-antones.mjs / probe-antones-api.mjs"
+}

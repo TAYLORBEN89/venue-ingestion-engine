@@ -1,0 +1,15 @@
+{
+	"slug": "moody-amphitheater-austin",
+	"name": "Moody Amphitheater",
+	"calendar_url": null,
+	"website_url": null,
+	"platform_type": null,
+	"timezone": "America/Chicago",
+	"script": null,
+	"related_scripts": [
+		"engine/scripts/probe-moody-amp.mjs",
+		"engine/scripts/probe-moody-amp-full.mjs",
+		"engine/scripts/probe-moody-amp-deep.mjs"
+	],
+	"notes": "Completed pilot; probe-moody-amp*.mjs"
+}

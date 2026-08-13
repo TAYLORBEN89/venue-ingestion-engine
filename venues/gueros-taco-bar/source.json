@@ -1,0 +1,12 @@
+{
+	"slug": "gueros-taco-bar",
+	"name": "Guero's Taco Bar",
+	"calendar_url": "https://www.guerostacobar.com/events/",
+	"website_url": "https://www.guerostacobar.com/",
+	"platform_type": "tec",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-batch-round5.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-batch-round5.mjs"
+	]
+}

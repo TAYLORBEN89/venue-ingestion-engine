@@ -1,0 +1,12 @@
+{
+	"slug": "cap-city-comedy-club",
+	"name": "Cap City Comedy Club",
+	"calendar_url": "https://www.capcitycomedy.com/calendar",
+	"website_url": null,
+	"platform_type": "seatengine",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-cap-city.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-cap-city.mjs"
+	]
+}

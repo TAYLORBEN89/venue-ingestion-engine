@@ -1,0 +1,12 @@
+{
+	"slug": "donns-depot",
+	"name": "Donn's Depot",
+	"calendar_url": "https://www.donnsdepot.com/",
+	"website_url": "https://www.donnsdepot.com/",
+	"platform_type": "schema_events",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-batch-round4.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-batch-round4.mjs"
+	]
+}

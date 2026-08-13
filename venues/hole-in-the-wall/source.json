@@ -1,0 +1,12 @@
+{
+	"slug": "hole-in-the-wall",
+	"name": "Hole in the Wall",
+	"calendar_url": "https://www.theholeinthewallaustin.com/shows",
+	"website_url": null,
+	"platform_type": "prekindle",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-hole-in-the-wall.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-hole-in-the-wall.mjs"
+	]
+}

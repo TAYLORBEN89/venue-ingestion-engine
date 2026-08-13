@@ -11,7 +11,7 @@ import { fileURLToPath } from "url";
 import { createClient } from "@supabase/supabase-js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, "../../../..");
+const ROOT = path.resolve(__dirname, "../..");
 const VENUE_SLUG = "poodie-s-hilltop-roadhouse";
 const TZ = "America/Chicago";
 const MAX_HOURS = 2;
@@ -19,6 +19,7 @@ const MAX_HOURS = 2;
 function loadEnv() {
 	const env = { ...process.env };
 	for (const f of [
+		path.join(ROOT, "engine/.dev.vars"),
 		path.join(ROOT, "apps/ingestion/.dev.vars"),
 		path.join(ROOT, "apps/admin/.env.local"),
 	]) {

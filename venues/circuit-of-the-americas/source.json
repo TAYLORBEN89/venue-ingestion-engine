@@ -1,0 +1,14 @@
+{
+	"slug": "circuit-of-the-americas",
+	"name": "Circuit of The Americas",
+	"calendar_url": "https://circuitoftheamericas.com/events/?layout=list",
+	"website_url": null,
+	"platform_type": "custom_html",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-cota.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-cota.mjs",
+		"engine/scripts/curate-cota.mjs",
+		"engine/scripts/stage-cota-local.mjs"
+	]
+}

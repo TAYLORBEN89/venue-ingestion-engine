@@ -1,5 +1,5 @@
 {
-	"note": "Venue calendar sources recovered from HeyAustin pilot scripts. The live venues table is not in this package. Use slug + calendar_url + platform_type to reseed venue_event_sources.",
+	"note": "Canonical venue list. Each slug has venues/<slug>/source.json + README.md. Run scripts from engine/.",
 	"timezone": "America/Chicago",
 	"venues": [
 		{
@@ -9,21 +9,23 @@
 			"website_url": "https://poodies.net/",
 			"platform_type": "outhousetickets",
 			"script": "engine/scripts/pilot-poodies.mjs",
-			"packet": "examples/venues/poodies-hilltop/"
+			"packet": "venues/poodie-s-hilltop-roadhouse/"
 		},
 		{
 			"slug": "doc-s-bar-and-grill",
 			"name": "Doc's Bar and Grill",
 			"calendar_url": "https://eatdrinkdocs.com/events",
 			"platform_type": "spotapps",
-			"script": "engine/scripts/pilot-docs-bar.mjs"
+			"script": "engine/scripts/pilot-docs-bar.mjs",
+			"packet": "venues/doc-s-bar-and-grill/"
 		},
 		{
 			"slug": "the-hideout-theatre",
 			"name": "The Hideout Theatre",
 			"calendar_url": "https://hideouttheatre.com/calendar/",
 			"platform_type": "events_manager",
-			"script": "engine/scripts/pilot-hideout.mjs"
+			"script": "engine/scripts/pilot-hideout.mjs",
+			"packet": "venues/the-hideout-theatre/"
 		},
 		{
 			"slug": "the-velveeta-room",
@@ -31,42 +33,48 @@
 			"calendar_url": "https://the-velveeta-room-the-velveeta-room.seatengine.com/calendar",
 			"website_url": "https://www.thevelveetaroom.com/",
 			"platform_type": "seatengine",
-			"script": "engine/scripts/pilot-velveeta-room.mjs"
+			"script": "engine/scripts/pilot-velveeta-room.mjs",
+			"packet": "venues/the-velveeta-room/"
 		},
 		{
 			"slug": "speakeasy",
 			"name": "Speakeasy",
 			"calendar_url": "https://speakeasyaustin.com/calendar/",
 			"platform_type": "eventon",
-			"script": "engine/scripts/pilot-speakeasy.mjs"
+			"script": "engine/scripts/pilot-speakeasy.mjs",
+			"packet": "venues/speakeasy/"
 		},
 		{
 			"slug": "the-mohawk",
 			"name": "The Mohawk",
 			"calendar_url": "https://mohawkaustin.com/",
 			"platform_type": "prekindle",
-			"script": "engine/scripts/pilot-mohawk.mjs"
+			"script": "engine/scripts/pilot-mohawk.mjs",
+			"packet": "venues/the-mohawk/"
 		},
 		{
 			"slug": "hole-in-the-wall",
 			"name": "Hole in the Wall",
 			"calendar_url": "https://www.theholeinthewallaustin.com/shows",
 			"platform_type": "prekindle",
-			"script": "engine/scripts/pilot-hole-in-the-wall.mjs"
+			"script": "engine/scripts/pilot-hole-in-the-wall.mjs",
+			"packet": "venues/hole-in-the-wall/"
 		},
 		{
 			"slug": "cap-city-comedy-club",
 			"name": "Cap City Comedy Club",
 			"calendar_url": "https://www.capcitycomedy.com/calendar",
 			"platform_type": "seatengine",
-			"script": "engine/scripts/pilot-cap-city.mjs"
+			"script": "engine/scripts/pilot-cap-city.mjs",
+			"packet": "venues/cap-city-comedy-club/"
 		},
 		{
 			"slug": "the-carousel-lounge",
 			"name": "The Carousel Lounge",
 			"calendar_url": "https://carousellounge.com/elementor-1022/",
 			"platform_type": "tec",
-			"script": "engine/scripts/pilot-carousel-lounge.mjs"
+			"script": "engine/scripts/pilot-carousel-lounge.mjs",
+			"packet": "venues/the-carousel-lounge/"
 		},
 		{
 			"slug": "san-jac-saloon",
@@ -74,35 +82,40 @@
 			"calendar_url": "https://www.sanjacsaloon.com/events",
 			"website_url": "https://www.sanjacsaloon.com/",
 			"platform_type": "ical",
-			"script": "engine/scripts/pilot-san-jac.mjs"
+			"script": "engine/scripts/pilot-san-jac.mjs",
+			"packet": "venues/san-jac-saloon/"
 		},
 		{
 			"slug": "frontyard-brewing",
 			"name": "Frontyard Brewing",
 			"calendar_url": "https://www.frontyardbrewing.com/upcoming-events",
 			"platform_type": "squarespace_events",
-			"script": "engine/scripts/pilot-frontyard.mjs"
+			"script": "engine/scripts/pilot-frontyard.mjs",
+			"packet": "venues/frontyard-brewing/"
 		},
 		{
 			"slug": "vista-brewing",
 			"name": "Vista Brewing",
 			"calendar_url": "https://www.vistabrewingtx.com/calendars",
 			"platform_type": "squarespace_events",
-			"script": "engine/scripts/pilot-vista.mjs"
+			"script": "engine/scripts/pilot-vista.mjs",
+			"packet": "venues/vista-brewing/"
 		},
 		{
 			"slug": "jester-king",
 			"name": "Jester King",
 			"calendar_url": "https://jesterkingbrewery.com/events-calendar",
 			"platform_type": "spacecrafted",
-			"script": "engine/scripts/pilot-jester-king.mjs"
+			"script": "engine/scripts/pilot-jester-king.mjs",
+			"packet": "venues/jester-king/"
 		},
 		{
 			"slug": "moontower-saloon",
 			"name": "Moontower Saloon",
 			"calendar_url": "https://moontowersaloon.com/austin-menchaca-moontower-saloon-events",
 			"platform_type": "spotapps",
-			"script": "engine/scripts/pilot-moontower.mjs"
+			"script": "engine/scripts/pilot-moontower.mjs",
+			"packet": "venues/moontower-saloon/"
 		},
 		{
 			"slug": "germania-insurance-amphitheater",
@@ -110,42 +123,48 @@
 			"calendar_url": "http://germaniaamp.com/events/",
 			"website_url": "https://www.germaniaamp.com/",
 			"platform_type": "custom_html",
-			"script": "engine/scripts/pilot-germania-amp.mjs"
+			"script": "engine/scripts/pilot-germania-amp.mjs",
+			"packet": "venues/germania-insurance-amphitheater/"
 		},
 		{
 			"slug": "circuit-of-the-americas",
 			"name": "Circuit of The Americas",
 			"calendar_url": "https://circuitoftheamericas.com/events/?layout=list",
 			"platform_type": "custom_html",
-			"script": "engine/scripts/pilot-cota.mjs"
+			"script": "engine/scripts/pilot-cota.mjs",
+			"packet": "venues/circuit-of-the-americas/"
 		},
 		{
 			"slug": "vulcan-gas-company",
 			"name": "Vulcan Gas Company",
 			"calendar_url": "https://www.vulcanatx.com/",
 			"platform_type": "webflow",
-			"script": "engine/scripts/pilot-vulcan.mjs"
+			"script": "engine/scripts/pilot-vulcan.mjs",
+			"packet": "venues/vulcan-gas-company/"
 		},
 		{
 			"slug": "flamingo-cantina",
 			"name": "Flamingo Cantina",
 			"calendar_url": "https://flamingocantina.com/calendar/list/",
 			"platform_type": "tec",
-			"script": "engine/scripts/pilot-flamingo-cantina.mjs"
+			"script": "engine/scripts/pilot-flamingo-cantina.mjs",
+			"packet": "venues/flamingo-cantina/"
 		},
 		{
 			"slug": "come-and-take-it-live",
 			"name": "Come and Take It Live",
 			"calendar_url": "https://comeandtakeitproductions.com/calendar/",
 			"platform_type": "rhp_events",
-			"script": "engine/scripts/pilot-cati-live.mjs"
+			"script": "engine/scripts/pilot-cati-live.mjs",
+			"packet": "venues/come-and-take-it-live/"
 		},
 		{
 			"slug": "the-long-center",
 			"name": "The Long Center",
 			"calendar_url": "https://thelongcenter.org/upcoming-calendar/",
 			"platform_type": "eventon",
-			"script": "engine/scripts/pilot-long-center-full.mjs"
+			"script": "engine/scripts/pilot-long-center-full.mjs",
+			"packet": "venues/the-long-center/"
 		},
 		{
 			"slug": "acl-live",
@@ -153,7 +172,8 @@
 			"calendar_url": "https://www.acllive.com/events",
 			"website_url": "https://www.acllive.com/",
 			"platform_type": "axs",
-			"script": "engine/scripts/pilot-acl-events-full.mjs"
+			"script": "engine/scripts/pilot-acl-events-full.mjs",
+			"packet": "venues/acl-live/"
 		},
 		{
 			"slug": "friends-bar",
@@ -161,7 +181,8 @@
 			"calendar_url": "https://www.friendsbar.com/calendar",
 			"website_url": "https://www.friendsbar.com/",
 			"platform_type": "wix_events",
-			"script": "engine/scripts/pilot-batch-new.mjs"
+			"script": "engine/scripts/pilot-batch-new.mjs",
+			"packet": "venues/friends-bar/"
 		},
 		{
 			"slug": "cactus-cafe",
@@ -169,7 +190,8 @@
 			"calendar_url": "https://cactuscafe.org/events",
 			"website_url": "https://cactuscafe.org/",
 			"platform_type": "drupal_events",
-			"script": "engine/scripts/pilot-batch-round3.mjs"
+			"script": "engine/scripts/pilot-batch-round3.mjs",
+			"packet": "venues/cactus-cafe/"
 		},
 		{
 			"slug": "coupland-dancehall",
@@ -177,7 +199,8 @@
 			"calendar_url": "https://www.couplanddancehall.com/shows",
 			"website_url": "https://www.couplanddancehall.com/",
 			"platform_type": "etix",
-			"script": "engine/scripts/pilot-batch-round3.mjs"
+			"script": "engine/scripts/pilot-batch-round3.mjs",
+			"packet": "venues/coupland-dancehall/"
 		},
 		{
 			"slug": "celis-brewery",
@@ -185,7 +208,8 @@
 			"calendar_url": "https://celisbeers.com/events",
 			"website_url": "https://celisbeers.com/",
 			"platform_type": "wix_events",
-			"script": "engine/scripts/pilot-batch-round3.mjs"
+			"script": "engine/scripts/pilot-batch-round3.mjs",
+			"packet": "venues/celis-brewery/"
 		},
 		{
 			"slug": "the-white-horse",
@@ -193,7 +217,8 @@
 			"calendar_url": "https://thewhitehorseaustin.com/events",
 			"website_url": "https://thewhitehorseaustin.com/",
 			"platform_type": "wix_events",
-			"script": "engine/scripts/pilot-batch-round2.mjs"
+			"script": "engine/scripts/pilot-batch-round2.mjs",
+			"packet": "venues/the-white-horse/"
 		},
 		{
 			"slug": "donns-depot",
@@ -201,7 +226,8 @@
 			"calendar_url": "https://www.donnsdepot.com/",
 			"website_url": "https://www.donnsdepot.com/",
 			"platform_type": "schema_events",
-			"script": "engine/scripts/pilot-batch-round4.mjs"
+			"script": "engine/scripts/pilot-batch-round4.mjs",
+			"packet": "venues/donns-depot/"
 		},
 		{
 			"slug": "gueros-taco-bar",
@@ -209,21 +235,24 @@
 			"calendar_url": "https://www.guerostacobar.com/events/",
 			"website_url": "https://www.guerostacobar.com/",
 			"platform_type": "tec",
-			"script": "engine/scripts/pilot-batch-round5.mjs"
+			"script": "engine/scripts/pilot-batch-round5.mjs",
+			"packet": "venues/gueros-taco-bar/"
 		},
 		{
 			"slug": "the-saxon-pub",
 			"name": "The Saxon Pub",
 			"calendar_url": "https://thesaxonpub.com/events/",
 			"platform_type": "tec",
-			"script": "engine/scripts/saxon-full-calendar.mjs"
+			"script": "engine/scripts/saxon-full-calendar.mjs",
+			"packet": "venues/the-saxon-pub/"
 		},
 		{
 			"slug": "elephant-room",
 			"name": "Elephant Room",
 			"calendar_url": "https://elephantroom.com/calendar",
 			"platform_type": "zoogle",
-			"script": "engine/scripts/repilot-venues.mjs"
+			"script": "engine/scripts/repilot-venues.mjs",
+			"packet": "venues/elephant-room/"
 		},
 		{
 			"slug": "the-historic-scoot-inn",
@@ -231,14 +260,16 @@
 			"calendar_url": "https://scootinnaustin.com/events",
 			"website_url": "https://scootinnaustin.com/",
 			"platform_type": "livenation",
-			"script": "engine/scripts/repilot-venues.mjs"
+			"script": "engine/scripts/repilot-venues.mjs",
+			"packet": "venues/the-historic-scoot-inn/"
 		},
 		{
 			"slug": "esther-s-follies",
 			"name": "Esther's Follies",
 			"calendar_url": "https://esthersfollies.com/tickets",
 			"platform_type": "esthers_follies",
-			"script": "engine/scripts/repilot-venues.mjs"
+			"script": "engine/scripts/repilot-venues.mjs",
+			"packet": "venues/esther-s-follies/"
 		}
 	],
 	"also_piloted_via_generic_pipeline": [

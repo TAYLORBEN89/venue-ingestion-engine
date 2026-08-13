@@ -1,0 +1,13 @@
+{
+	"slug": "vulcan-gas-company",
+	"name": "Vulcan Gas Company",
+	"calendar_url": "https://www.vulcanatx.com/",
+	"website_url": null,
+	"platform_type": "webflow",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-vulcan.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-vulcan.mjs",
+		"engine/scripts/pilot-vulcan-stage.mjs"
+	]
+}

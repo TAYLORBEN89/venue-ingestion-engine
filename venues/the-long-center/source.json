@@ -1,0 +1,13 @@
+{
+	"slug": "the-long-center",
+	"name": "The Long Center",
+	"calendar_url": "https://thelongcenter.org/upcoming-calendar/",
+	"website_url": null,
+	"platform_type": "eventon",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-long-center-full.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-long-center-full.mjs",
+		"engine/scripts/pilot-batch-round4.mjs"
+	]
+}

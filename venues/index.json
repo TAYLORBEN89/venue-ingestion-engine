@@ -1,0 +1,197 @@
+[
+	{
+		"slug": "poodie-s-hilltop-roadhouse",
+		"name": "Poodie's Hilltop Roadhouse",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "doc-s-bar-and-grill",
+		"name": "Doc's Bar and Grill",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-hideout-theatre",
+		"name": "The Hideout Theatre",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-velveeta-room",
+		"name": "The Velveeta Room",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "speakeasy",
+		"name": "Speakeasy",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-mohawk",
+		"name": "The Mohawk",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "hole-in-the-wall",
+		"name": "Hole in the Wall",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "cap-city-comedy-club",
+		"name": "Cap City Comedy Club",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-carousel-lounge",
+		"name": "The Carousel Lounge",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "san-jac-saloon",
+		"name": "San Jac Saloon",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "frontyard-brewing",
+		"name": "Frontyard Brewing",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "vista-brewing",
+		"name": "Vista Brewing",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "jester-king",
+		"name": "Jester King",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "moontower-saloon",
+		"name": "Moontower Saloon",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "germania-insurance-amphitheater",
+		"name": "Germania Insurance Amphitheater",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "circuit-of-the-americas",
+		"name": "Circuit of The Americas",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "vulcan-gas-company",
+		"name": "Vulcan Gas Company",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "flamingo-cantina",
+		"name": "Flamingo Cantina",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "come-and-take-it-live",
+		"name": "Come and Take It Live",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-long-center",
+		"name": "The Long Center",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "acl-live",
+		"name": "ACL Live at the Moody Theater",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "friends-bar",
+		"name": "Friends Bar",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "cactus-cafe",
+		"name": "Cactus Cafe",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "coupland-dancehall",
+		"name": "Coupland Dancehall",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "celis-brewery",
+		"name": "Celis Brewery",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-white-horse",
+		"name": "The White Horse",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "donns-depot",
+		"name": "Donn's Depot",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "gueros-taco-bar",
+		"name": "Guero's Taco Bar",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-saxon-pub",
+		"name": "The Saxon Pub",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "elephant-room",
+		"name": "Elephant Room",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-historic-scoot-inn",
+		"name": "The Historic Scoot Inn",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "esther-s-follies",
+		"name": "Esther's Follies",
+		"kind": "dedicated"
+	},
+	{
+		"slug": "the-moody-center",
+		"name": "Moody Center",
+		"kind": "generic"
+	},
+	{
+		"slug": "moody-amphitheater-austin",
+		"name": "Moody Amphitheater",
+		"kind": "generic"
+	},
+	{
+		"slug": "meanwhile-brewing-company",
+		"name": "Meanwhile Brewing Company",
+		"kind": "generic"
+	},
+	{
+		"slug": "hotel-vegas",
+		"name": "Hotel Vegas",
+		"kind": "generic"
+	},
+	{
+		"slug": "stubb-s-bbq",
+		"name": "Stubb's BBQ",
+		"kind": "generic"
+	},
+	{
+		"slug": "antones-nightclub",
+		"name": "Antone's Nightclub",
+		"kind": "generic"
+	},
+	{
+		"slug": "buck-s-backyard",
+		"name": "Buck's Backyard",
+		"kind": "generic"
+	}
+]

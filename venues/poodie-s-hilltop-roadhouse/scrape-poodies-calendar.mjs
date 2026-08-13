@@ -1,21 +1,21 @@
 /**
  * Poodie's calendar scrape — pages + music.html + month PNGs.
  *
- *   node apps/ingestion/venues/poodies-hilltop/scrape-poodies-calendar.mjs
- *   node apps/ingestion/venues/poodies-hilltop/scrape-poodies-calendar.mjs --year=2026
+ *   node venues/poodie-s-hilltop-roadhouse/scrape-poodies-calendar.mjs
+ *   node venues/poodie-s-hilltop-roadhouse/scrape-poodies-calendar.mjs --year=2026
  *
  * Writes:
  *   tmp-enhance/poodies/scrape-manifest.json
  *   tmp-enhance/poodies/slots-from-music.json  (parsed from music.html)
  *   tmp-enhance/poodies/{month}.png
- *   apps/ingestion/venues/poodies-hilltop/slots-merged.json (music + august fixture)
+ *   venues/poodie-s-hilltop-roadhouse/slots-merged.json (music + august fixture)
  */
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, "../../../..");
+const ROOT = path.resolve(__dirname, "../..");
 const OUT = path.join(ROOT, "tmp-enhance", "poodies");
 const PACKET = __dirname;
 

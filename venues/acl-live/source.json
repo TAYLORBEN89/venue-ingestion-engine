@@ -1,0 +1,14 @@
+{
+	"slug": "acl-live",
+	"name": "ACL Live at the Moody Theater",
+	"calendar_url": "https://www.acllive.com/events",
+	"website_url": "https://www.acllive.com/",
+	"platform_type": "axs",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-acl-events-full.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-acl-events-full.mjs",
+		"engine/scripts/pilot-acl-3ten-full-calendar.mjs",
+		"engine/scripts/backfill-acl-ticket-urls.mjs"
+	]
+}

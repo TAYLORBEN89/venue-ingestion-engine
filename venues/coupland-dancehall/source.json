@@ -1,0 +1,13 @@
+{
+	"slug": "coupland-dancehall",
+	"name": "Coupland Dancehall",
+	"calendar_url": "https://www.couplanddancehall.com/shows",
+	"website_url": "https://www.couplanddancehall.com/",
+	"platform_type": "etix",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-batch-round3.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-batch-round3.mjs",
+		"engine/scripts/fix-coupland-images.mjs"
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"slug": "buck-s-backyard",
+	"name": "Buck's Backyard",
+	"calendar_url": null,
+	"website_url": null,
+	"platform_type": null,
+	"timezone": "America/Chicago",
+	"script": null,
+	"related_scripts": [
+		"engine/scripts/lib/pilot-venue-filters.mjs"
+	],
+	"notes": "Listed as completed in engine/scripts/lib/pilot-venue-filters.mjs"
+}

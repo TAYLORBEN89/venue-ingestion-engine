@@ -1,0 +1,14 @@
+{
+	"slug": "the-moody-center",
+	"name": "Moody Center",
+	"calendar_url": null,
+	"website_url": null,
+	"platform_type": null,
+	"timezone": "America/Chicago",
+	"script": null,
+	"related_scripts": [
+		"engine/scripts/probe-moody-center-html.mjs",
+		"engine/scripts/probe-moody-images.mjs"
+	],
+	"notes": "Completed pilot; probe scripts under engine/scripts/probe-moody-*"
+}

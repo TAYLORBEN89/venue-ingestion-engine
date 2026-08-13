@@ -1,0 +1,12 @@
+{
+	"slug": "come-and-take-it-live",
+	"name": "Come and Take It Live",
+	"calendar_url": "https://comeandtakeitproductions.com/calendar/",
+	"website_url": null,
+	"platform_type": "rhp_events",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-cati-live.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-cati-live.mjs"
+	]
+}

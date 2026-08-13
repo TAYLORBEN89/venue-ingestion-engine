@@ -1,0 +1,13 @@
+{
+	"slug": "moontower-saloon",
+	"name": "Moontower Saloon",
+	"calendar_url": "https://moontowersaloon.com/austin-menchaca-moontower-saloon-events",
+	"website_url": null,
+	"platform_type": "spotapps",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-moontower.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-moontower.mjs",
+		"engine/scripts/fix-moontower-images.mjs"
+	]
+}

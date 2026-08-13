@@ -1,0 +1,12 @@
+{
+	"slug": "vista-brewing",
+	"name": "Vista Brewing",
+	"calendar_url": "https://www.vistabrewingtx.com/calendars",
+	"website_url": null,
+	"platform_type": "squarespace_events",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-vista.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-vista.mjs"
+	]
+}

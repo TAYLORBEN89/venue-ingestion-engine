@@ -1,0 +1,12 @@
+{
+	"slug": "the-hideout-theatre",
+	"name": "The Hideout Theatre",
+	"calendar_url": "https://hideouttheatre.com/calendar/",
+	"website_url": null,
+	"platform_type": "events_manager",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-hideout.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-hideout.mjs"
+	]
+}

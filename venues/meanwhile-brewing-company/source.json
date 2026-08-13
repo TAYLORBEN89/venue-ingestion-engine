@@ -1,0 +1,14 @@
+{
+	"slug": "meanwhile-brewing-company",
+	"name": "Meanwhile Brewing Company",
+	"calendar_url": null,
+	"website_url": null,
+	"platform_type": null,
+	"timezone": "America/Chicago",
+	"script": null,
+	"related_scripts": [
+		"engine/scripts/probe-meanwhile-months.mjs",
+		"engine/scripts/probe-hotel-meanwhile.mjs"
+	],
+	"notes": "Completed pilot; probe-meanwhile-*.mjs / probe-hotel-meanwhile.mjs"
+}

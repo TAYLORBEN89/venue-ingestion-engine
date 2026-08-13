@@ -1,0 +1,13 @@
+{
+	"slug": "the-historic-scoot-inn",
+	"name": "The Historic Scoot Inn",
+	"calendar_url": "https://scootinnaustin.com/events",
+	"website_url": "https://scootinnaustin.com/",
+	"platform_type": "livenation",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/repilot-venues.mjs",
+	"related_scripts": [
+		"engine/scripts/repilot-venues.mjs",
+		"engine/scripts/fix-scoot-descriptions.mjs"
+	]
+}

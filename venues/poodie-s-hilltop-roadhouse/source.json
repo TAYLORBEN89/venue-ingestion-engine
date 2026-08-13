@@ -1,0 +1,13 @@
+{
+	"slug": "poodie-s-hilltop-roadhouse",
+	"name": "Poodie's Hilltop Roadhouse",
+	"calendar_url": "https://outhousetickets.com/venues/poodies-hilltop-roadhouse",
+	"website_url": "https://poodies.net/",
+	"platform_type": "outhousetickets",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-poodies.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-poodies.mjs",
+		"venues/poodie-s-hilltop-roadhouse/scrape-poodies-calendar.mjs"
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"slug": "germania-insurance-amphitheater",
+	"name": "Germania Insurance Amphitheater",
+	"calendar_url": "http://germaniaamp.com/events/",
+	"website_url": "https://www.germaniaamp.com/",
+	"platform_type": "custom_html",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-germania-amp.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-germania-amp.mjs",
+		"engine/scripts/smoke-germania-amp.mjs",
+		"engine/scripts/fix-germania-images.mjs"
+	]
+}

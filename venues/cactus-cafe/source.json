@@ -1,0 +1,13 @@
+{
+	"slug": "cactus-cafe",
+	"name": "Cactus Cafe",
+	"calendar_url": "https://cactuscafe.org/events",
+	"website_url": "https://cactuscafe.org/",
+	"platform_type": "drupal_events",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-batch-round3.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-batch-round3.mjs",
+		"engine/scripts/fix-cactus-full.mjs"
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"slug": "doc-s-bar-and-grill",
+	"name": "Doc's Bar and Grill",
+	"calendar_url": "https://eatdrinkdocs.com/events",
+	"website_url": null,
+	"platform_type": "spotapps",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-docs-bar.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-docs-bar.mjs",
+		"engine/scripts/smoke-spotapps-docs.mjs"
+	]
+}

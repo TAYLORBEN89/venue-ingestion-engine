@@ -1,0 +1,14 @@
+{
+	"slug": "san-jac-saloon",
+	"name": "San Jac Saloon",
+	"calendar_url": "https://www.sanjacsaloon.com/events",
+	"website_url": "https://www.sanjacsaloon.com/",
+	"platform_type": "ical",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-san-jac.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-san-jac.mjs",
+		"engine/scripts/smoke-san-jac-ics.mjs",
+		"engine/scripts/smoke-san-jac-htmlembed.mjs"
+	]
+}

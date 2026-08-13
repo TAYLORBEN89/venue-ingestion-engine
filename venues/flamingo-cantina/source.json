@@ -1,0 +1,12 @@
+{
+	"slug": "flamingo-cantina",
+	"name": "Flamingo Cantina",
+	"calendar_url": "https://flamingocantina.com/calendar/list/",
+	"website_url": null,
+	"platform_type": "tec",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-flamingo-cantina.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-flamingo-cantina.mjs"
+	]
+}

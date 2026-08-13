@@ -1,0 +1,12 @@
+{
+	"slug": "the-velveeta-room",
+	"name": "The Velveeta Room",
+	"calendar_url": "https://the-velveeta-room-the-velveeta-room.seatengine.com/calendar",
+	"website_url": "https://www.thevelveetaroom.com/",
+	"platform_type": "seatengine",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-velveeta-room.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-velveeta-room.mjs"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"slug": "esther-s-follies",
+	"name": "Esther's Follies",
+	"calendar_url": "https://esthersfollies.com/tickets",
+	"website_url": null,
+	"platform_type": "esthers_follies",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/repilot-venues.mjs",
+	"related_scripts": [
+		"engine/scripts/repilot-venues.mjs"
+	]
+}

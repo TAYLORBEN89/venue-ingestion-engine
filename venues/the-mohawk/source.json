@@ -1,0 +1,12 @@
+{
+	"slug": "the-mohawk",
+	"name": "The Mohawk",
+	"calendar_url": "https://mohawkaustin.com/",
+	"website_url": null,
+	"platform_type": "prekindle",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-mohawk.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-mohawk.mjs"
+	]
+}

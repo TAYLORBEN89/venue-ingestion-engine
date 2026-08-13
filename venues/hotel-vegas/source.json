@@ -1,0 +1,14 @@
+{
+	"slug": "hotel-vegas",
+	"name": "Hotel Vegas",
+	"calendar_url": null,
+	"website_url": null,
+	"platform_type": null,
+	"timezone": "America/Chicago",
+	"script": null,
+	"related_scripts": [
+		"engine/scripts/probe-hotel-detail.mjs",
+		"engine/scripts/probe-mec-hotel.mjs"
+	],
+	"notes": "Completed pilot; probe-hotel-*.mjs / probe-mec-hotel*.mjs"
+}

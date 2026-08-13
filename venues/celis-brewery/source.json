@@ -1,0 +1,12 @@
+{
+	"slug": "celis-brewery",
+	"name": "Celis Brewery",
+	"calendar_url": "https://celisbeers.com/events",
+	"website_url": "https://celisbeers.com/",
+	"platform_type": "wix_events",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-batch-round3.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-batch-round3.mjs"
+	]
+}

@@ -12,7 +12,7 @@ import { fileURLToPath } from "url";
 import { createClient } from "@supabase/supabase-js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, "../../../..");
+const ROOT = path.resolve(__dirname, "../..");
 const VENUE_ID = "f327605b-d032-4e43-a027-fb227af27682";
 const SITE_ID = "51177cff-babf-4a36-a258-834f4e880b87";
 const VENUE_SLUG = "poodie-s-hilltop-roadhouse";
@@ -23,6 +23,7 @@ const SOURCE_PARTNER = "poodies_net";
 function loadEnv() {
 	const env = { ...process.env };
 	for (const f of [
+		path.join(ROOT, "engine/.dev.vars"),
 		path.join(ROOT, "apps/ingestion/.dev.vars"),
 		path.join(ROOT, "apps/admin/.env.local"),
 	]) {

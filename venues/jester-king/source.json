@@ -1,0 +1,12 @@
+{
+	"slug": "jester-king",
+	"name": "Jester King",
+	"calendar_url": "https://jesterkingbrewery.com/events-calendar",
+	"website_url": null,
+	"platform_type": "spacecrafted",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/pilot-jester-king.mjs",
+	"related_scripts": [
+		"engine/scripts/pilot-jester-king.mjs"
+	]
+}

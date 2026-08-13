@@ -38,10 +38,10 @@ venue-ingestion-engine/
     VENUES.md               ← every piloted venue + which script
     CONVENTIONS.md
     ENV.md
-  examples/venues/          ← catalog.json + Poodie's standalone packet
+  venues/                   ← one folder per venue (source.json + README)
 ```
 
-**Venues:** start at [`docs/VENUES.md`](./docs/VENUES.md) and [`examples/venues/catalog.json`](./examples/venues/catalog.json). Scripts live in [`engine/scripts/`](./engine/scripts/).
+**Venues:** open [`venues/`](./venues/). Each slug has `source.json` and a README. Scripts live in [`engine/scripts/`](./engine/scripts/).
 
 ## What you do **not** get
 

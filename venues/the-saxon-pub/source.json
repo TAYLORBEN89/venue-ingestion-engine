@@ -1,0 +1,13 @@
+{
+	"slug": "the-saxon-pub",
+	"name": "The Saxon Pub",
+	"calendar_url": "https://thesaxonpub.com/events/",
+	"website_url": null,
+	"platform_type": "tec",
+	"timezone": "America/Chicago",
+	"script": "engine/scripts/saxon-full-calendar.mjs",
+	"related_scripts": [
+		"engine/scripts/saxon-full-calendar.mjs",
+		"engine/scripts/repilot-venues.mjs"
+	]
+}

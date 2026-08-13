@@ -2,8 +2,9 @@
 
 Copied from the HeyAustin `apps/ingestion/scripts` tree. These are the **per-venue ingestion and scrape scripts** for the pilot — not a database dump.
 
-Venue index: [`../../docs/VENUES.md`](../../docs/VENUES.md)  
-Reseed map: [`../../examples/venues/catalog.json`](../../examples/venues/catalog.json)  
+Venue folders: [`../../venues/`](../../venues/)  
+Index: [`../../docs/VENUES.md`](../../docs/VENUES.md)  
+Reseed map: [`../../venues/catalog.json`](../../venues/catalog.json)  
 Adapters the scripts call: [`src/lib/sources/`](../src/lib/sources/)
 
 ## Run
