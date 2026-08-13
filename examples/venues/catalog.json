@@ -1,0 +1,274 @@
+{
+	"note": "Venue calendar sources recovered from HeyAustin pilot scripts. The live venues table is not in this package. Use slug + calendar_url + platform_type to reseed venue_event_sources.",
+	"timezone": "America/Chicago",
+	"venues": [
+		{
+			"slug": "poodie-s-hilltop-roadhouse",
+			"name": "Poodie's Hilltop Roadhouse",
+			"calendar_url": "https://outhousetickets.com/venues/poodies-hilltop-roadhouse",
+			"website_url": "https://poodies.net/",
+			"platform_type": "outhousetickets",
+			"script": "engine/scripts/pilot-poodies.mjs",
+			"packet": "examples/venues/poodies-hilltop/"
+		},
+		{
+			"slug": "doc-s-bar-and-grill",
+			"name": "Doc's Bar and Grill",
+			"calendar_url": "https://eatdrinkdocs.com/events",
+			"platform_type": "spotapps",
+			"script": "engine/scripts/pilot-docs-bar.mjs"
+		},
+		{
+			"slug": "the-hideout-theatre",
+			"name": "The Hideout Theatre",
+			"calendar_url": "https://hideouttheatre.com/calendar/",
+			"platform_type": "events_manager",
+			"script": "engine/scripts/pilot-hideout.mjs"
+		},
+		{
+			"slug": "the-velveeta-room",
+			"name": "The Velveeta Room",
+			"calendar_url": "https://the-velveeta-room-the-velveeta-room.seatengine.com/calendar",
+			"website_url": "https://www.thevelveetaroom.com/",
+			"platform_type": "seatengine",
+			"script": "engine/scripts/pilot-velveeta-room.mjs"
+		},
+		{
+			"slug": "speakeasy",
+			"name": "Speakeasy",
+			"calendar_url": "https://speakeasyaustin.com/calendar/",
+			"platform_type": "eventon",
+			"script": "engine/scripts/pilot-speakeasy.mjs"
+		},
+		{
+			"slug": "the-mohawk",
+			"name": "The Mohawk",
+			"calendar_url": "https://mohawkaustin.com/",
+			"platform_type": "prekindle",
+			"script": "engine/scripts/pilot-mohawk.mjs"
+		},
+		{
+			"slug": "hole-in-the-wall",
+			"name": "Hole in the Wall",
+			"calendar_url": "https://www.theholeinthewallaustin.com/shows",
+			"platform_type": "prekindle",
+			"script": "engine/scripts/pilot-hole-in-the-wall.mjs"
+		},
+		{
+			"slug": "cap-city-comedy-club",
+			"name": "Cap City Comedy Club",
+			"calendar_url": "https://www.capcitycomedy.com/calendar",
+			"platform_type": "seatengine",
+			"script": "engine/scripts/pilot-cap-city.mjs"
+		},
+		{
+			"slug": "the-carousel-lounge",
+			"name": "The Carousel Lounge",
+			"calendar_url": "https://carousellounge.com/elementor-1022/",
+			"platform_type": "tec",
+			"script": "engine/scripts/pilot-carousel-lounge.mjs"
+		},
+		{
+			"slug": "san-jac-saloon",
+			"name": "San Jac Saloon",
+			"calendar_url": "https://www.sanjacsaloon.com/events",
+			"website_url": "https://www.sanjacsaloon.com/",
+			"platform_type": "ical",
+			"script": "engine/scripts/pilot-san-jac.mjs"
+		},
+		{
+			"slug": "frontyard-brewing",
+			"name": "Frontyard Brewing",
+			"calendar_url": "https://www.frontyardbrewing.com/upcoming-events",
+			"platform_type": "squarespace_events",
+			"script": "engine/scripts/pilot-frontyard.mjs"
+		},
+		{
+			"slug": "vista-brewing",
+			"name": "Vista Brewing",
+			"calendar_url": "https://www.vistabrewingtx.com/calendars",
+			"platform_type": "squarespace_events",
+			"script": "engine/scripts/pilot-vista.mjs"
+		},
+		{
+			"slug": "jester-king",
+			"name": "Jester King",
+			"calendar_url": "https://jesterkingbrewery.com/events-calendar",
+			"platform_type": "spacecrafted",
+			"script": "engine/scripts/pilot-jester-king.mjs"
+		},
+		{
+			"slug": "moontower-saloon",
+			"name": "Moontower Saloon",
+			"calendar_url": "https://moontowersaloon.com/austin-menchaca-moontower-saloon-events",
+			"platform_type": "spotapps",
+			"script": "engine/scripts/pilot-moontower.mjs"
+		},
+		{
+			"slug": "germania-insurance-amphitheater",
+			"name": "Germania Insurance Amphitheater",
+			"calendar_url": "http://germaniaamp.com/events/",
+			"website_url": "https://www.germaniaamp.com/",
+			"platform_type": "custom_html",
+			"script": "engine/scripts/pilot-germania-amp.mjs"
+		},
+		{
+			"slug": "circuit-of-the-americas",
+			"name": "Circuit of The Americas",
+			"calendar_url": "https://circuitoftheamericas.com/events/?layout=list",
+			"platform_type": "custom_html",
+			"script": "engine/scripts/pilot-cota.mjs"
+		},
+		{
+			"slug": "vulcan-gas-company",
+			"name": "Vulcan Gas Company",
+			"calendar_url": "https://www.vulcanatx.com/",
+			"platform_type": "webflow",
+			"script": "engine/scripts/pilot-vulcan.mjs"
+		},
+		{
+			"slug": "flamingo-cantina",
+			"name": "Flamingo Cantina",
+			"calendar_url": "https://flamingocantina.com/calendar/list/",
+			"platform_type": "tec",
+			"script": "engine/scripts/pilot-flamingo-cantina.mjs"
+		},
+		{
+			"slug": "come-and-take-it-live",
+			"name": "Come and Take It Live",
+			"calendar_url": "https://comeandtakeitproductions.com/calendar/",
+			"platform_type": "rhp_events",
+			"script": "engine/scripts/pilot-cati-live.mjs"
+		},
+		{
+			"slug": "the-long-center",
+			"name": "The Long Center",
+			"calendar_url": "https://thelongcenter.org/upcoming-calendar/",
+			"platform_type": "eventon",
+			"script": "engine/scripts/pilot-long-center-full.mjs"
+		},
+		{
+			"slug": "acl-live",
+			"name": "ACL Live at the Moody Theater",
+			"calendar_url": "https://www.acllive.com/events",
+			"website_url": "https://www.acllive.com/",
+			"platform_type": "axs",
+			"script": "engine/scripts/pilot-acl-events-full.mjs"
+		},
+		{
+			"slug": "friends-bar",
+			"name": "Friends Bar",
+			"calendar_url": "https://www.friendsbar.com/calendar",
+			"website_url": "https://www.friendsbar.com/",
+			"platform_type": "wix_events",
+			"script": "engine/scripts/pilot-batch-new.mjs"
+		},
+		{
+			"slug": "cactus-cafe",
+			"name": "Cactus Cafe",
+			"calendar_url": "https://cactuscafe.org/events",
+			"website_url": "https://cactuscafe.org/",
+			"platform_type": "drupal_events",
+			"script": "engine/scripts/pilot-batch-round3.mjs"
+		},
+		{
+			"slug": "coupland-dancehall",
+			"name": "Coupland Dancehall",
+			"calendar_url": "https://www.couplanddancehall.com/shows",
+			"website_url": "https://www.couplanddancehall.com/",
+			"platform_type": "etix",
+			"script": "engine/scripts/pilot-batch-round3.mjs"
+		},
+		{
+			"slug": "celis-brewery",
+			"name": "Celis Brewery",
+			"calendar_url": "https://celisbeers.com/events",
+			"website_url": "https://celisbeers.com/",
+			"platform_type": "wix_events",
+			"script": "engine/scripts/pilot-batch-round3.mjs"
+		},
+		{
+			"slug": "the-white-horse",
+			"name": "The White Horse",
+			"calendar_url": "https://thewhitehorseaustin.com/events",
+			"website_url": "https://thewhitehorseaustin.com/",
+			"platform_type": "wix_events",
+			"script": "engine/scripts/pilot-batch-round2.mjs"
+		},
+		{
+			"slug": "donns-depot",
+			"name": "Donn's Depot",
+			"calendar_url": "https://www.donnsdepot.com/",
+			"website_url": "https://www.donnsdepot.com/",
+			"platform_type": "schema_events",
+			"script": "engine/scripts/pilot-batch-round4.mjs"
+		},
+		{
+			"slug": "gueros-taco-bar",
+			"name": "Guero's Taco Bar",
+			"calendar_url": "https://www.guerostacobar.com/events/",
+			"website_url": "https://www.guerostacobar.com/",
+			"platform_type": "tec",
+			"script": "engine/scripts/pilot-batch-round5.mjs"
+		},
+		{
+			"slug": "the-saxon-pub",
+			"name": "The Saxon Pub",
+			"calendar_url": "https://thesaxonpub.com/events/",
+			"platform_type": "tec",
+			"script": "engine/scripts/saxon-full-calendar.mjs"
+		},
+		{
+			"slug": "elephant-room",
+			"name": "Elephant Room",
+			"calendar_url": "https://elephantroom.com/calendar",
+			"platform_type": "zoogle",
+			"script": "engine/scripts/repilot-venues.mjs"
+		},
+		{
+			"slug": "the-historic-scoot-inn",
+			"name": "The Historic Scoot Inn",
+			"calendar_url": "https://scootinnaustin.com/events",
+			"website_url": "https://scootinnaustin.com/",
+			"platform_type": "livenation",
+			"script": "engine/scripts/repilot-venues.mjs"
+		},
+		{
+			"slug": "esther-s-follies",
+			"name": "Esther's Follies",
+			"calendar_url": "https://esthersfollies.com/tickets",
+			"platform_type": "esthers_follies",
+			"script": "engine/scripts/repilot-venues.mjs"
+		}
+	],
+	"also_piloted_via_generic_pipeline": [
+		{
+			"slug": "the-moody-center",
+			"notes": "Completed pilot; probe scripts under engine/scripts/probe-moody-*"
+		},
+		{
+			"slug": "moody-amphitheater-austin",
+			"notes": "Completed pilot; probe-moody-amp*.mjs"
+		},
+		{
+			"slug": "meanwhile-brewing-company",
+			"notes": "Completed pilot; probe-meanwhile-*.mjs / probe-hotel-meanwhile.mjs"
+		},
+		{
+			"slug": "hotel-vegas",
+			"notes": "Completed pilot; probe-hotel-*.mjs / probe-mec-hotel*.mjs"
+		},
+		{
+			"slug": "stubb-s-bbq",
+			"notes": "Completed pilot; probe-stubbs.mjs / test-stubbs-discovery.mjs"
+		},
+		{
+			"slug": "antones-nightclub",
+			"notes": "Completed pilot; inspect-antones.mjs / probe-antones-api.mjs"
+		},
+		{
+			"slug": "buck-s-backyard",
+			"notes": "Listed as completed in engine/scripts/lib/pilot-venue-filters.mjs"
+		}
+	]
+}

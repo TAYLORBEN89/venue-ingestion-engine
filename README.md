@@ -27,6 +27,7 @@ venue-ingestion-engine/
   engine/                   ← Cloudflare Worker app (copy of apps/ingestion)
     src/lib/sources/        ← calendar platform adapters
     src/workflows/          ← venue-ingestion + scheduler
+    scripts/                ← per-venue pilot / scrape / ingest scripts
     wrangler.jsonc
     package.json
   schema/                   ← SQL for venues/sources/ingestion (subset)
@@ -34,10 +35,13 @@ venue-ingestion-engine/
     PORTING.md              ← apply to another site/stack
     ARCHITECTURE.md
     ADAPTERS.md             ← which scrapers exist / when to use them
+    VENUES.md               ← every piloted venue + which script
     CONVENTIONS.md
     ENV.md
-  examples/venues/          ← sample venue-specific notes from pilot
+  examples/venues/          ← catalog.json + Poodie's standalone packet
 ```
+
+**Venues:** start at [`docs/VENUES.md`](./docs/VENUES.md) and [`examples/venues/catalog.json`](./examples/venues/catalog.json). Scripts live in [`engine/scripts/`](./engine/scripts/).
 
 ## What you do **not** get
 

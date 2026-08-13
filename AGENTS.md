@@ -16,9 +16,10 @@ You are applying the **HeyAustin pilot venue-ingestion engine** to another site 
 3. `docs/PORTING.md` — how to apply to another platform  
 4. `docs/ARCHITECTURE.md` — pipeline as built  
 5. `docs/ADAPTERS.md` — catalog of scrapers that worked in pilot  
-6. `docs/CONVENTIONS.md` — hard rules (manual wins, draft-first, site_id)  
-7. `docs/ENV.md` — bindings and secrets  
-8. Then only the files needed for the task  
+6. `docs/VENUES.md` — every piloted venue, calendar URL, and script  
+7. `docs/CONVENTIONS.md` — hard rules (manual wins, draft-first, site_id)  
+8. `docs/ENV.md` — bindings and secrets  
+9. Then only the files needed for the task  
 
 ## Truth hierarchy
 
@@ -56,9 +57,10 @@ engine/           Runnable ingestion Worker (src, wrangler, package.json)
   src/lib/dedup.ts          Match against existing events
   src/lib/extract.ts        Workers AI structured extract
   src/lib/browser.ts        Browser Run helpers
+  scripts/                  Per-venue pilot / scrape / ingest scripts
 schema/           SQL migrations for sources + ingestion tables
-docs/             Architecture, porting, adapters, env, conventions
-examples/         Sample venue notes (e.g. poodies-hilltop)
+docs/             Architecture, porting, adapters, venues, env, conventions
+examples/venues/  catalog.json + Poodie's standalone packet
 LICENSE / NOTICE  Proprietary; ThinAIR ownership grant
 ```
 
