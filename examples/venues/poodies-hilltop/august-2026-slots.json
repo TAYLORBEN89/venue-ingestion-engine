@@ -1,0 +1,100 @@
+{
+	"source": "https://poodies.net/images/events/calendar/august.png",
+	"source_page": "https://poodies.net/calendar-next.html",
+	"year": 2026,
+	"month": 8,
+	"extracted": "vision+manual from calendar PNG 2026-07-26",
+	"notes": "Times/cover from glance PNG. Reconcile against music.html when August list posts.",
+	"slots": [
+		{ "date": "2026-08-01", "start": "13:00", "title": "Dakota Spellman", "face": "Dakota Spellman", "artists": ["Dakota Spellman"] },
+		{ "date": "2026-08-01", "start": "20:00", "title": "Andrea Marie", "face": "Andrea Marie", "artists": ["Andrea Marie"], "cover": "$15 / $20" },
+		{ "date": "2026-08-01", "start": "22:00", "title": "Madam Radar", "face": "Madam Radar", "artists": ["Madam Radar"], "cover": "$15 / $20" },
+
+		{ "date": "2026-08-02", "start": "16:00", "title": "Mike Lemieux Celebration of Life featuring Bad Rodeo", "face": "Bad Rodeo", "artists": ["Mike Lemieux", "Bad Rodeo"] },
+		{ "date": "2026-08-02", "start": "19:30", "title": "Tasmin & Tim", "face": "Tasmin & Tim", "artists": ["Tasmin & Tim"] },
+
+		{ "date": "2026-08-03", "start": "18:30", "title": "Songwriters Showcase", "kind": "song_swap", "host": "John Arthur Martinez", "guest": "Jordan Minor", "face": "Jordan Minor", "artists": ["John Arthur Martinez", "Jordan Minor"] },
+
+		{ "date": "2026-08-04", "start": "17:00", "title": "The Troubadillos", "face": "The Troubadillos", "artists": ["The Troubadillos"] },
+		{ "date": "2026-08-04", "start": "20:00", "title": "Madam Radar Duo", "face": "Madam Radar Duo", "artists": ["Madam Radar Duo"] },
+
+		{ "date": "2026-08-05", "start": "19:30", "title": "Andrea Marie Song Swap with Robert Wagner", "kind": "song_swap", "host": "Andrea Marie", "guest": "Robert Wagner", "face": "Robert Wagner", "artists": ["Andrea Marie", "Robert Wagner"] },
+		{ "date": "2026-08-05", "start": "21:00", "title": "No Bad Wednesdays Open Mic", "face": null, "artists": [], "optional": true },
+
+		{ "date": "2026-08-06", "start": "18:00", "title": "Ryan Landers", "face": "Ryan Landers", "artists": ["Ryan Landers"] },
+		{ "date": "2026-08-06", "start": "20:00", "title": "Dukes of the Hill Country", "face": "Dukes of the Hill Country", "artists": ["Dukes of the Hill Country"] },
+
+		{ "date": "2026-08-07", "start": "20:00", "title": "Morningstar", "face": "Morningstar", "artists": ["Morningstar"], "cover": "$10" },
+		{ "date": "2026-08-07", "start": "22:30", "title": "Scott Allison", "face": "Scott Allison", "artists": ["Scott Allison"], "cover": "$10" },
+
+		{ "date": "2026-08-08", "start": "13:00", "title": "Dakota Spellman", "face": "Dakota Spellman", "artists": ["Dakota Spellman"] },
+		{ "date": "2026-08-08", "start": "20:00", "title": "The Greers", "face": "The Greers", "artists": ["The Greers"], "cover": "$10" },
+		{ "date": "2026-08-08", "start": "22:30", "title": "Will Rhodes", "face": "Will Rhodes", "artists": ["Will Rhodes"], "cover": "$10" },
+
+		{ "date": "2026-08-09", "start": "16:00", "title": "Switcharoos", "face": "Switcharoos", "artists": ["Switcharoos"] },
+		{ "date": "2026-08-09", "start": "19:30", "title": "Chuck Shaw", "face": "Chuck Shaw", "artists": ["Chuck Shaw"] },
+
+		{ "date": "2026-08-10", "start": "18:30", "title": "Songwriters Showcase", "kind": "song_swap", "host": "Tate Mayeux", "guest": "Billy Broome", "face": "Billy Broome", "artists": ["Tate Mayeux", "Billy Broome"] },
+
+		{ "date": "2026-08-11", "start": "17:00", "title": "The Troubadillos", "face": "The Troubadillos", "artists": ["The Troubadillos"] },
+		{ "date": "2026-08-11", "start": "20:00", "title": "Kim Meeks", "face": "Kim Meeks", "artists": ["Kim Meeks"] },
+
+		{ "date": "2026-08-12", "start": "20:00", "title": "No Bad Wednesdays Open Mic", "host": "B.B. Morse", "face": "B.B. Morse", "artists": ["B.B. Morse"], "optional": true },
+
+		{ "date": "2026-08-13", "start": "18:00", "title": "Taylor Wilkins", "face": "Taylor Wilkins", "artists": ["Taylor Wilkins"] },
+		{ "date": "2026-08-13", "start": "20:00", "title": "Dukes of the Hill Country", "face": "Dukes of the Hill Country", "artists": ["Dukes of the Hill Country"] },
+
+		{ "date": "2026-08-14", "start": "20:00", "title": "Candy Coburn", "face": "Candy Coburn", "artists": ["Candy Coburn"], "cover": "$10 / $15" },
+		{ "date": "2026-08-14", "start": "22:00", "title": "A.B. Hill", "face": "A.B. Hill", "artists": ["A.B. Hill"], "cover": "$10" },
+
+		{ "date": "2026-08-15", "start": "13:00", "title": "Dakota Spellman", "face": "Dakota Spellman", "artists": ["Dakota Spellman"] },
+		{ "date": "2026-08-15", "start": "20:00", "title": "Ricke Brothers", "face": "Ricke Brothers", "artists": ["Ricke Brothers"] },
+		{ "date": "2026-08-15", "start": "22:00", "title": "Wolf Trax", "face": "Wolf Trax", "artists": ["Wolf Trax"], "cover": "$10" },
+		{ "date": "2026-08-15", "start": "22:30", "title": "TJ Wicks and the Top Hands", "face": "TJ Wicks and the Top Hands", "artists": ["TJ Wicks and the Top Hands"], "cover": "$10" },
+
+		{ "date": "2026-08-16", "start": "16:00", "title": "Carl Hutchens", "face": "Carl Hutchens", "artists": ["Carl Hutchens"] },
+		{ "date": "2026-08-16", "start": "19:30", "title": "Bruce Smith", "face": "Bruce Smith", "artists": ["Bruce Smith"] },
+
+		{ "date": "2026-08-17", "start": "18:30", "title": "Songwriters Showcase", "kind": "song_swap", "host": "George Ensle", "guest": "Doug Gill & Lynn Langham", "face": "Doug Gill & Lynn Langham", "artists": ["George Ensle", "Doug Gill & Lynn Langham"] },
+
+		{ "date": "2026-08-18", "start": "17:00", "title": "The Troubadillos", "face": "The Troubadillos", "artists": ["The Troubadillos"] },
+		{ "date": "2026-08-18", "start": "20:00", "title": "Jacob Doddy", "face": "Jacob Doddy", "artists": ["Jacob Doddy"] },
+
+		{ "date": "2026-08-19", "start": "20:00", "title": "Steve Bigler Blues Night / No Bad Wednesdays Open Mic", "host": "Steve Bigler", "face": "Steve Bigler", "artists": ["Steve Bigler"], "optional": true },
+
+		{ "date": "2026-08-20", "start": "18:00", "title": "Adam Johnson", "face": "Adam Johnson", "artists": ["Adam Johnson"] },
+		{ "date": "2026-08-20", "start": "20:00", "title": "Dukes of the Hill Country", "face": "Dukes of the Hill Country", "artists": ["Dukes of the Hill Country"] },
+
+		{ "date": "2026-08-21", "start": "20:00", "title": "Hector Ward & The Big Time", "face": "Hector Ward & The Big Time", "artists": ["Hector Ward & The Big Time"], "cover": "$10 / $15" },
+		{ "date": "2026-08-21", "start": "22:30", "title": "Joshua Callan & Co.", "face": "Joshua Callan & Co.", "artists": ["Joshua Callan & Co."], "cover": "$10" },
+
+		{ "date": "2026-08-22", "start": "13:00", "title": "Dakota Spellman", "face": "Dakota Spellman", "artists": ["Dakota Spellman"] },
+		{ "date": "2026-08-22", "start": "20:00", "title": "Gary Nicholson & The Change", "face": "Gary Nicholson & The Change", "artists": ["Gary Nicholson & The Change"], "cover": "$15 / $20" },
+		{ "date": "2026-08-22", "start": "22:30", "title": "Matthew Payne", "face": "Matthew Payne", "artists": ["Matthew Payne"], "cover": "$10" },
+
+		{ "date": "2026-08-23", "start": "16:00", "title": "Shufflehawks", "face": "Shufflehawks", "artists": ["Shufflehawks"] },
+		{ "date": "2026-08-23", "start": "19:30", "title": "Chuck Shaw", "face": "Chuck Shaw", "artists": ["Chuck Shaw"] },
+
+		{ "date": "2026-08-24", "start": "18:30", "title": "Songwriters Showcase", "kind": "song_swap", "host": "Aaron McDonnell", "guest": "Christopher Seymore", "face": "Christopher Seymore", "artists": ["Aaron McDonnell", "Christopher Seymore"] },
+
+		{ "date": "2026-08-25", "start": "17:00", "title": "The Troubadillos", "face": "The Troubadillos", "artists": ["The Troubadillos"] },
+		{ "date": "2026-08-25", "start": "20:00", "title": "Kim Meeks", "face": "Kim Meeks", "artists": ["Kim Meeks"] },
+
+		{ "date": "2026-08-26", "start": "20:00", "title": "No Bad Wednesdays Open Mic", "host": "B.B. Morse", "face": "B.B. Morse", "artists": ["B.B. Morse"], "optional": true },
+
+		{ "date": "2026-08-27", "start": "18:00", "title": "James Hearne", "face": "James Hearne", "artists": ["James Hearne"] },
+		{ "date": "2026-08-27", "start": "20:00", "title": "Dukes of the Hill Country", "face": "Dukes of the Hill Country", "artists": ["Dukes of the Hill Country"] },
+
+		{ "date": "2026-08-28", "start": "20:00", "title": "Brodie Lane", "face": "Brodie Lane", "artists": ["Brodie Lane"], "cover": "$10" },
+		{ "date": "2026-08-28", "start": "22:00", "title": "Keegan Melroe & Band", "face": "Keegan Melroe & Band", "artists": ["Keegan Melroe & Band"], "cover": "$10" },
+
+		{ "date": "2026-08-29", "start": "13:00", "title": "Dakota Spellman", "face": "Dakota Spellman", "artists": ["Dakota Spellman"] },
+		{ "date": "2026-08-29", "start": "20:00", "title": "Guy Forsyth", "face": "Guy Forsyth", "artists": ["Guy Forsyth"], "cover": "$20 / $25" },
+		{ "date": "2026-08-29", "start": "22:30", "title": "The Wainthropps", "face": "The Wainthropps", "artists": ["The Wainthropps"], "cover": "$10" },
+
+		{ "date": "2026-08-30", "start": "16:00", "title": "Carl Hutchens", "face": "Carl Hutchens", "artists": ["Carl Hutchens"] },
+		{ "date": "2026-08-30", "start": "19:30", "title": "Scott Allison", "face": "Scott Allison", "artists": ["Scott Allison"] },
+
+		{ "date": "2026-08-31", "start": "18:30", "title": "Songwriters Showcase", "kind": "song_swap", "host": "Julie Nolen", "guest": "Mary Charlie Young", "face": "Mary Charlie Young", "artists": ["Julie Nolen", "Mary Charlie Young"] }
+	]
+}

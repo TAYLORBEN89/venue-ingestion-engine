@@ -1,0 +1,6 @@
+# Copy to .dev.vars (never commit .dev.vars)
+SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+ENABLE_AI_SCRAPE_FALLBACK=true
+ENABLE_AUTO_ARTIST_GENERATION=false
+# TICKETMASTER_API_KEY=

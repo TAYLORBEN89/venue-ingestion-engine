@@ -1,0 +1,47 @@
+{
+	"id": "poodies-hilltop",
+	"version": 1,
+	"venue": {
+		"name": "Poodie's Hilltop Roadhouse",
+		"slug": "poodie-s-hilltop-roadhouse",
+		"timezone": "America/Chicago",
+		"partner_home": "https://poodies.net/",
+		"calendar_page": "https://poodies.net/calendar.html",
+		"calendar_next_page": "https://poodies.net/calendar-next.html",
+		"music_html": "https://poodies.net/music.html",
+		"calendar_image_template": "https://poodies.net/images/events/calendar/{month}.png",
+		"outhouse_venue_url": "https://outhousetickets.com/venues/poodies-hilltop-roadhouse"
+	},
+	"extract": {
+		"prefer": ["music_html_when_current_month", "month_calendar_image"],
+		"notes": "music.html has day-by-day sets+times for the current month. Next month is often only a glance PNG until music.html rolls forward."
+	},
+	"schedule": {
+		"one_event_per_timed_set": true,
+		"max_set_hours": 2,
+		"last_set_hours": 2,
+		"end_rule": "If next set same day: end = min(next.start, start+2h). Else end = start+2h."
+	},
+	"publish": {
+		"mode": "draft",
+		"auto_publish": false
+	},
+	"billing": {
+		"auto_create_artists": false,
+		"missing_artist_in_db": "omit_link_but_still_mention_in_intro",
+		"featuring_member_laundry_list": "off",
+		"madam_radar_duo": "Never link full Madam Radar band on Duo nights",
+		"songwriters_showcase": {
+			"one_event": true,
+			"face": "guest",
+			"host_role": "host",
+			"guest_role": "special_guest"
+		}
+	},
+	"categories": ["live-music", "food-drink"],
+	"enrichment": {
+		"featured_photo_from_face_artist": true,
+		"genres_from_face_artist": true,
+		"outhouse_tickets": "optional_merge_only"
+	}
+}

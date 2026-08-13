@@ -1,0 +1,11 @@
+﻿{
+  "name": "venue-ingestion-engine",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "HeyAustin pilot venue calendar ingestion engine — handoff package for ThinAIR Solutions",
+  "scripts": {
+    "typecheck": "npm run typecheck --prefix engine",
+    "dev": "npm run dev --prefix engine",
+    "deploy": "npm run deploy --prefix engine"
+  }
+}

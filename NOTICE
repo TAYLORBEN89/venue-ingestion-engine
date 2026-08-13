@@ -1,0 +1,10 @@
+Venue Ingestion Engine (pilot handoff)
+
+Author:  Ben Taylor d/b/a CompEssential
+Owner:   ThinAIR Solutions and its subsidiaries (full ownership + usage under LICENSE §2)
+Contact: ben@compessential.com
+
+SPDX-License-Identifier: UNLICENSED
+
+Third-party packages (next/workers stack deps when installed) remain under
+upstream licenses — not assigned by this package LICENSE.

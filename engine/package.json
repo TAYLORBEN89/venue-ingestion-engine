@@ -1,0 +1,23 @@
+{
+	"name": "events-platform-ingestion",
+	"version": "0.1.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy",
+		"typecheck": "tsc --noEmit",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
+	},
+	"dependencies": {
+		"@jsquash/jpeg": "^1.6.0",
+		"@jsquash/png": "^3.1.1",
+		"@jsquash/webp": "^1.5.0",
+		"@supabase/supabase-js": "^2.110.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.19.43",
+		"typescript": "^5.7.4",
+		"wrangler": "^4.86.0"
+	}
+}

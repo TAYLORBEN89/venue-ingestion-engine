@@ -1,0 +1,79 @@
+Copyright (c) 2026 Ben Taylor, d/b/a CompEssential
+All Rights Reserved (except as expressly granted herein).
+
+================================================================================
+  VENUE INGESTION ENGINE — PROPRIETARY LICENSE
+  FULL OWNERSHIP & USAGE GRANT TO THINAIR SOLUTIONS
+================================================================================
+
+Package:     venue-ingestion-engine (pilot scrape / calendar adapters handoff)
+Source:      Extracted from events-platform (HeyAustin pilot)
+Author:      Ben Taylor, doing business as CompEssential
+Contact:     ben@compessential.com
+
+--------------------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------------------
+
+1.1  "Author" means Ben Taylor d/b/a CompEssential.
+
+1.2  "ThinAIR" means ThinAIR Solutions and its parent companies, subsidiaries,
+     affiliates, successors, and assigns.
+
+1.3  "Software" means this handoff package: engine source (Cloudflare Worker
+     ingestion, workflows, platform adapters under engine/src), schema
+     migrations, documentation, examples, and scripts included herein.
+     Excludes Third-Party Materials (open-source dependencies).
+
+--------------------------------------------------------------------------------
+2. FULL OWNERSHIP AND USAGE GRANT TO THINAIR
+--------------------------------------------------------------------------------
+
+2.1  The Author hereby irrevocably assigns to ThinAIR Solutions and its
+     subsidiaries all right, title, and interest in the Software worldwide,
+     including copyright and the rights to use, copy, modify, create derivative
+     works, distribute, commercialize, sublicense, migrate, rehost, rebuild,
+     and enforce against infringers.
+
+2.2  ThinAIR may use this package to power any ThinAIR platform rebuild
+     (including private repositories such as ThinAirSolutionsBuild), engage
+     contractors and AI agents, and integrate adapters into ThinAIR products,
+     without further consent or royalty to the Author.
+
+2.3  Short notice:
+
+       Copyright (c) 2026 ThinAIR Solutions (and subsidiaries).
+       Originally authored by Ben Taylor d/b/a CompEssential; ownership and
+       full usage rights assigned under LICENSE.
+
+--------------------------------------------------------------------------------
+3. NO RIGHTS FOR UNAUTHORIZED PARTIES
+--------------------------------------------------------------------------------
+
+Except ThinAIR (and the Author for archival/legal copies), no other party may
+copy, use, or distribute the Software without a written grant from ThinAIR.
+SPDX-License-Identifier: UNLICENSED
+
+--------------------------------------------------------------------------------
+4. THIRD-PARTY MATERIALS
+--------------------------------------------------------------------------------
+
+npm/Cloudflare dependencies remain under their own licenses (see NOTICE).
+
+--------------------------------------------------------------------------------
+5. NO WARRANTY / LIABILITY
+--------------------------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM
+EXTENT PERMITTED BY LAW, LIABILITY TO UNAUTHORIZED PARTIES IS DISCLAIMED.
+
+--------------------------------------------------------------------------------
+6. GOVERNING LAW
+--------------------------------------------------------------------------------
+
+Texas law and U.S. federal copyright law. Venue: Travis County, Texas, unless
+ThinAIR elects otherwise.
+
+SPDX-License-Identifier: UNLICENSED
+Copyright (c) 2026 Ben Taylor d/b/a CompEssential — ownership and full usage
+rights assigned to ThinAIR Solutions and its subsidiaries per Section 2.

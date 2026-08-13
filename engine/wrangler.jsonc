@@ -1,0 +1,43 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "events-platform-ingestion",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-07-05",
+	"compatibility_flags": ["nodejs_compat"],
+	"browser": {
+		"binding": "BROWSER",
+		"remote": true
+	},
+	"ai": {
+		"binding": "AI"
+	},
+	"workflows": [
+		{
+			"name": "ingestion-scheduler",
+			"binding": "SCHEDULER_WORKFLOW",
+			"class_name": "IngestionSchedulerWorkflow"
+		},
+		{
+			"name": "venue-ingestion",
+			"binding": "VENUE_INGESTION_WORKFLOW",
+			"class_name": "VenueIngestionWorkflow"
+		}
+	],
+	"triggers": {
+		// Weekly Mondays at 09:00 UTC (~4am America/Chicago) — full pilot fan-out
+		// once per week (not daily). Manual "Run pilot" still works anytime.
+		// Plain Cron Trigger (Workflow-attached schedules need Workers Paid).
+		"crons": ["0 9 * * 1"]
+	},
+	"observability": {
+		"enabled": true
+	},
+	"vars": {
+		"ENABLE_AI_SCRAPE_FALLBACK": "true",
+		"ENABLE_AUTO_ARTIST_GENERATION": "true"
+	}
+}
