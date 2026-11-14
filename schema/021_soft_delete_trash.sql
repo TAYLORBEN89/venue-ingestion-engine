@@ -1,3 +1,20 @@
+-- Rollback (run by hand, not applied by this package):
+--   drop index if exists idx_regions_deleted_at;
+--   drop index if exists idx_categories_deleted_at;
+--   drop index if exists idx_rentals_deleted_at;
+--   drop index if exists idx_posts_deleted_at;
+--   drop index if exists idx_deals_deleted_at;
+--   drop index if exists idx_artists_deleted_at;
+--   drop index if exists idx_venues_deleted_at;
+--   drop index if exists idx_events_deleted_at;
+--   alter table regions drop column if exists deleted_at;
+--   alter table categories drop column if exists deleted_at;
+--   alter table rentals drop column if exists deleted_at;
+--   alter table posts drop column if exists deleted_at;
+--   alter table deals drop column if exists deleted_at;
+--   alter table artists drop column if exists deleted_at;
+--   alter table venues drop column if exists deleted_at;
+--   alter table events drop column if exists deleted_at;
 -- Copied from ThinAirSolutionsBuild schema/021_soft_delete_trash.sql.
 -- Soft delete / trash: curator "Delete" moves rows out of main lists;
 -- restore from /trash. Hard delete only from trash (permanent).

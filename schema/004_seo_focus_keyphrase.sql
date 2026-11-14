@@ -1,3 +1,6 @@
+-- Rollback (run by hand, not applied by this package):
+--   alter table venues drop column if exists focus_keyphrase;
+--   alter table events drop column if exists focus_keyphrase;
 -- Copied from ThinAirSolutionsBuild schema/004_seo_focus_keyphrase.sql.
 -- Adds the remaining Yoast-standard on-page SEO field (focus keyphrase) to
 -- the two content types that get auto-generated SEO copy.

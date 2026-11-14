@@ -5,6 +5,7 @@
   "description": "HeyAustin pilot venue calendar ingestion engine — handoff package for ThinAIR Solutions",
   "scripts": {
     "typecheck": "npm run typecheck --prefix engine",
+    "check:all": "npm run check:all --prefix engine",
     "dev": "npm run dev --prefix engine",
     "deploy": "npm run deploy --prefix engine"
   }

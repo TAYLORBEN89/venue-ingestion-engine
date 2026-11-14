@@ -1,3 +1,8 @@
+-- Rollback (run by hand, not applied by this package):
+--   drop index if exists event_artists_event_order_idx;
+--   alter table event_artists drop column if exists role;
+--   alter table event_artists drop column if exists billing_order;
+--   alter table events drop column if exists field_sources;
 -- Copied from ThinAirSolutionsBuild schema/019_artist_enrichment_fields.sql.
 -- Artist enrichment: field provenance on events + richer event_artists links.
 -- Public event title remains venue-sourced; these support admin UX + multi-artist.

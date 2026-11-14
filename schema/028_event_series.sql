@@ -1,3 +1,10 @@
+-- Rollback (run by hand, not applied by this package):
+--   alter table ingested_events drop column if exists matched_series_id;
+--   drop index if exists events_event_series_id_idx;
+--   alter table events drop column if exists event_series_id;
+--   drop index if exists event_series_venue_idx;
+--   drop index if exists event_series_site_idx;
+--   drop table if exists event_series;
 -- Copied from ThinAirSolutionsBuild schema/028_event_series.sql.
 -- Non-artist recurring series stubs (admin backend).
 -- Used for series/event-format names like "Gospel Brunch", "Sing Along Saturdays",

@@ -17,7 +17,7 @@ You are applying the **HeyAustin pilot venue-ingestion engine** to another site 
 4. `docs/ARCHITECTURE.md` — pipeline as built  
 5. `docs/ADAPTERS.md` — catalog of scrapers that worked in pilot  
 6. `venues/` — one folder per venue (`source.json` + README); index in `docs/VENUES.md`  
-7. `docs/CONVENTIONS.md` — hard rules (manual wins, draft-first, site_id)  
+7. `docs/CONVENTIONS.md` — hard rules (lock order, draft-first, site_id)  
 8. `docs/ENV.md` — bindings and secrets  
 9. Then only the files needed for the task  
 
@@ -29,7 +29,8 @@ You are applying the **HeyAustin pilot venue-ingestion engine** to another site 
 
 ## Hard product rules (from pilot)
 
-- **Manual / curated events win** over scrape overwrites (`source = manual` must not be clobbered).  
+- Lock order, first match wins: archived; `deleted_at` (never clear it); published lock (workflow passes `refreshPublished: false`, a write never sets status back to draft and never writes `deleted_at`); `source=manual`; series (`event_series_id` or `source=series_generated`); per-field `field_sources` of `manual` or `series`; venue logistics; artist fields only while that field is still `artist`.
+- Apply `schema/` in full. `001` does not define those columns. `npm run check:all` fails when the hierarchy code reads or writes a column `schema/` does not define.  
 - Prefer **draft / review queue** (`ingested_events`) before public publish.  
 - Always stamp **`site_id`** (multi-tenant). Wrong site_id = invisible on public site.  
 - Prefer **structured adapters** (ICS, TEC REST, SeatEngine JSON, Squarespace collections) over blind HTML AI scrape.  
@@ -58,7 +59,7 @@ engine/           Runnable ingestion Worker (src, wrangler, package.json)
   src/lib/extract.ts        Workers AI structured extract
   src/lib/browser.ts        Browser Run helpers
   scripts/                  Per-venue pilot / scrape / ingest scripts
-schema/           SQL migrations for sources + ingestion tables
+schema/           Apply all of schema/ (see schema/README.md)
 docs/             Architecture, porting, adapters, venues, env, conventions
 venues/           One folder per venue (source.json + README + Poodie's packet)
 LICENSE / NOTICE  Proprietary; ThinAIR ownership grant
@@ -86,7 +87,7 @@ See `docs/PORTING.md`. Minimum viable port:
 |----|--------|
 | Read ADAPTERS.md before writing a new scraper | Scrape Facebook Graph as ongoing source |
 | Prefer ICS / official JSON APIs | Commit `tmp-*` HTML dumps |
-| Preserve PartnerEvent fields | Overwrite `source=manual` events |
+| Preserve PartnerEvent fields | Do not overwrite archived, published, manual, series, or per-field locked events |
 | Document new platform_type in schema + detect-platform | Hardcode a single venue into the core pipeline |
 
 ## License

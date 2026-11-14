@@ -1,3 +1,12 @@
+-- Rollback (run by hand, not applied by this package):
+--   drop index if exists idx_artists_site_name;
+--   alter table ingested_events drop column if exists artist_match_status;
+--   alter table ingested_events drop column if exists matched_artist_id;
+--   alter table ingested_events drop column if exists extracted_band_name;
+--   alter table artists drop column if exists focus_keyphrase;
+--   alter table artists drop column if exists seo_description;
+--   alter table artists drop column if exists seo_title;
+--   alter table artists drop column if exists aliases;
 -- Copied from ThinAirSolutionsBuild schema/006_band_catalog.sql.
 -- Band catalog enrichment for music-event ingestion.
 -- Scraper pulls venue/date/tickets; matcher fills image, bio, YouTube, SEO from artists.

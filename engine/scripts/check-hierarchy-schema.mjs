@@ -6,11 +6,13 @@
  * Run from engine/: node scripts/check-hierarchy-schema.mjs
  */
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const schemaDir = join(dirname(fileURLToPath(import.meta.url)), "../../schema");
+const root = join(dirname(fileURLToPath(import.meta.url)), "../..");
+const schemaDir = join(root, "schema");
+const srcDir = join(root, "engine/src");
 
 function sql(name) {
 	return readFileSync(join(schemaDir, name), "utf8");
@@ -97,5 +99,176 @@ has(series, "add column if not exists matched_series_id uuid references event_se
 has(series, "create index if not exists event_series_site_idx");
 has(series, "create index if not exists event_series_venue_idx");
 has(series, "create index if not exists events_event_series_id_idx");
+
+/** Line comments do not define columns. Quotes are preserved so '--' inside a string stays. */
+function stripSqlComments(text) {
+	return text
+		.split("\n")
+		.map((line) => {
+			let out = "";
+			let inQuote = false;
+			for (let i = 0; i < line.length; i++) {
+				const c = line[i];
+				if (c === "'" && line[i - 1] !== "\\") inQuote = !inQuote;
+				if (!inQuote && c === "-" && line[i + 1] === "-") break;
+				out += c;
+			}
+			return out;
+		})
+		.join("\n");
+}
+
+const commentOnly = stripSqlComments("-- alter table events add column source_url text;\nselect 1;\n");
+assert.equal(/\bsource_url\b/.test(commentOnly), false, "a -- comment must not define a column");
+
+function splitTopLevel(body) {
+	const parts = [];
+	let depth = 0;
+	let cur = "";
+	for (const c of body) {
+		if (c === "(") depth++;
+		else if (c === ")") depth = Math.max(0, depth - 1);
+		if (c === "," && depth === 0) {
+			parts.push(cur);
+			cur = "";
+		} else cur += c;
+	}
+	if (cur.trim()) parts.push(cur);
+	return parts;
+}
+
+const SKIP_LEADING = new Set([
+	"unique",
+	"primary",
+	"constraint",
+	"check",
+	"foreign",
+	"exclude",
+	"references",
+]);
+
+function addCreateColumns(sql, columns) {
+	const createRe =
+		/create table(?:\s+if\s+not\s+exists)?\s+(events|ingested_events|event_series)\s*\(([\s\S]*?)\);/gi;
+	for (const match of sql.matchAll(createRe)) {
+		const table = match[1].toLowerCase();
+		for (const part of splitTopLevel(match[2])) {
+			const name = part.match(/^\s*([a-z_][a-z0-9_]*)\b/i)?.[1]?.toLowerCase();
+			if (!name || SKIP_LEADING.has(name)) continue;
+			columns[table].add(name);
+		}
+	}
+}
+
+function addAlterColumns(sql, columns) {
+	const alterRe = /alter table\s+(events|ingested_events|event_series)\b([\s\S]*?);/gi;
+	for (const match of sql.matchAll(alterRe)) {
+		const table = match[1].toLowerCase();
+		const addRe = /add column(?:\s+if\s+not\s+exists)?\s+([a-z_][a-z0-9_]*)/gi;
+		for (const add of match[2].matchAll(addRe)) columns[table].add(add[1].toLowerCase());
+	}
+}
+
+function definedHierarchyColumns() {
+	const columns = { events: new Set(), ingested_events: new Set(), event_series: new Set() };
+	for (const name of readdirSync(schemaDir)) {
+		if (!name.endsWith(".sql")) continue;
+		const sql = stripSqlComments(readFileSync(join(schemaDir, name), "utf8"));
+		addCreateColumns(sql, columns);
+		addAlterColumns(sql, columns);
+	}
+	return columns;
+}
+
+function queryChains(source, table) {
+	const chains = [];
+	const needle = `.from("${table}")`;
+	let from = 0;
+	while (from < source.length) {
+		const start = source.indexOf(needle, from);
+		if (start === -1) break;
+		const next = source.indexOf('.from("', start + needle.length);
+		chains.push(source.slice(start, next === -1 ? source.length : next));
+		from = start + needle.length;
+	}
+	return chains;
+}
+
+function columnsInChain(chain) {
+	const found = new Set();
+	for (const sel of chain.matchAll(/\.select\(\s*"([^"]*)"\s*\)/g)) {
+		for (const col of sel[1].split(",")) {
+			const name = col.trim().toLowerCase();
+			if (name) found.add(name);
+		}
+	}
+	for (const filter of chain.matchAll(/\.(?:is|eq|neq|in)\(\s*"([a-zA-Z_][a-zA-Z0-9_]*)"/g)) {
+		found.add(filter[1].toLowerCase());
+	}
+	return found;
+}
+
+function insertKeysBeforeRawPayload(source) {
+	const keys = new Set();
+	if (!source.includes('.from("ingested_events")') || !source.includes(".insert(")) return keys;
+	const payload = source.indexOf("raw_payload:");
+	if (payload === -1) return keys;
+	const open = source.lastIndexOf("({", payload);
+	if (open === -1) return keys;
+	for (const line of source.slice(open, payload).split("\n")) {
+		const key = line.match(/^\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*:/)?.[1]?.toLowerCase();
+		if (key) keys.add(key);
+	}
+	return keys;
+}
+
+const HIERARCHY_FILES = [
+	"lib/refresh-event-from-venue.ts",
+	"workflows/venue-ingestion.ts",
+	"lib/dedup.ts",
+	"lib/match-event-series.ts",
+];
+
+const defined = definedHierarchyColumns();
+assert.equal(defined.events.has("source_url"), false, "events.source_url is not a schema column");
+assert.equal(defined.ingested_events.has("source_url"), true);
+assert.equal(defined.events.has("field_sources"), true);
+assert.equal(defined.events.has("event_series_id"), true);
+assert.equal(defined.events.has("deleted_at"), true);
+assert.equal(defined.event_series.has("deleted_at"), true);
+assert.equal(defined.ingested_events.has("matched_series_id"), true);
+
+const missing = [];
+for (const rel of HIERARCHY_FILES) {
+	const source = readFileSync(join(srcDir, rel), "utf8");
+	for (const table of ["events", "event_series", "ingested_events"]) {
+		for (const chain of queryChains(source, table)) {
+			for (const col of columnsInChain(chain)) {
+				if (!defined[table].has(col)) missing.push(`${rel} ${table}.${col}`);
+			}
+		}
+	}
+	if (rel.endsWith("refresh-event-from-venue.ts")) {
+		for (const assign of source.matchAll(/\bupdates\.([a-zA-Z_][a-zA-Z0-9_]*)\s*=/g)) {
+			const col = assign[1].toLowerCase();
+			if (!defined.events.has(col)) missing.push(`${rel} events.${col} (updates)`);
+		}
+	}
+	if (rel.endsWith("venue-ingestion.ts")) {
+		for (const col of insertKeysBeforeRawPayload(source)) {
+			if (!defined.ingested_events.has(col)) missing.push(`${rel} ingested_events.${col} (insert)`);
+		}
+	}
+}
+
+const knownId = readFileSync(join(srcDir, "workflows/venue-ingestion.ts"), "utf8");
+const eventsChain = queryChains(knownId, "events").join("\n");
+assert.equal(
+	eventsChain.includes("source_url"),
+	false,
+	"known-id query must not select events.source_url",
+);
+
+assert.deepEqual(missing, [], `hierarchy code uses columns schema/ does not define:\n${missing.join("\n")}`);
 
 console.log("hierarchy schema check passed");

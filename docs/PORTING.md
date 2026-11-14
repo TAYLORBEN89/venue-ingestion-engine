@@ -15,7 +15,7 @@ You do **not** need the full Next.js web/admin apps to get value from this packa
 Keep Cloudflare Worker + Supabase.
 
 1. Create new CF Worker project; copy `engine/` as the app root.  
-2. Apply `schema/` migrations (or equivalent tables) on your Supabase project.  
+2. Apply every file in `schema/` in numeric order. `001` is not enough: the engine needs `events.field_sources`, `events.event_series_id`, `events.deleted_at`, the `event_series` table, and the `ingested_events` match columns from `003`, `004`, `006`, `007`, `019`, `021`, and `028`. `npm run check:all` fails if one is missing.  
 3. Set secrets (`docs/ENV.md`).  
 4. Insert `sites`, `venues`, `venue_event_sources` for your market.  
 5. Trigger `VenueIngestionWorkflow` per venue/source.  
@@ -38,7 +38,8 @@ Keep Cloudflare Worker + Supabase.
 | Venue | `venues` | place + `site_id` |
 | Source | `venue_event_sources` | `calendar_url`, `event_feed_url`, `platform_type`, enabled flags |
 | Review queue | `ingested_events` | raw/normalized scrape before publish (recommended) |
-| Live shows | `events` | public/curated events; honor `source=manual` |
+| Live shows | `events` | public/curated events; honor the lock order below |
+| Series | `event_series` | non-artist recurring stubs; `events.event_series_id` and `ingested_events.matched_series_id` |
 | Run log | `ingestion_runs` | status, counts, errors |
 
 Field details: see SQL under `schema/`. Platform enum expansions: `023+` migrations.
@@ -81,7 +82,7 @@ Defined in `engine/src/lib/normalize.ts`. Adapters **must** produce this shape (
 
 | Rule | Why |
 |------|-----|
-| Do not overwrite `events.source = 'manual'` | Curators win |
+| Lock order, first match wins: archived; `deleted_at` (never clear it); published lock (workflow passes `refreshPublished: false`, a write never sets status back to draft and never writes `deleted_at`); `source=manual`; series (`event_series_id` or `source=series_generated`); per-field `field_sources` of `manual` or `series`; venue logistics; artist fields only while that field is still `artist` | A protected row is not rewritten |
 | Stamp `site_id` on every write | Multi-tenant isolation |
 | Prefer draft/review before publish | Bad scrapes don't hit public |
 | Keep adapter pure | Easier unit test / reuse |
@@ -99,7 +100,7 @@ ThinAirSolutionsBuild/
 
 ## Validation checklist (agent)
 
-- [ ] `npm install` + `npm run typecheck` in `engine/`  
+- [ ] `npm install` + `npm run check:all` in `engine/`  
 - [ ] One venue with known ICS or TEC calendar returns ≥1 future event  
 - [ ] Manual event not modified by re-scrape  
 - [ ] New adapter listed in ADAPTERS.md  
