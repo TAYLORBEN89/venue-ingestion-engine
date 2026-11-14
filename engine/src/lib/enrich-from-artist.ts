@@ -7,7 +7,7 @@ import { eventFingerprint } from "./fingerprint";
 import type { ArtistMatchResult, MatchedLineupArtist } from "./match-artist";
 
 /** Provenance for admin + re-fetch policies. */
-export type FieldSource = "venue" | "artist" | "manual" | "generated" | "none";
+export type FieldSource = "venue" | "artist" | "series" | "manual" | "generated" | "none";
 
 export type FieldSources = Partial<{
 	title: FieldSource;

@@ -9,8 +9,12 @@
 
 | Source | Policy |
 |--------|--------|
+| Archived, then trash (`deleted_at`) | Skip before any rewrite |
+| Published (`status = published`) | Workflow passes `refreshPublished: false`. The row is not rewritten and is never set back to draft |
 | `events.source = 'manual'` | **Never overwrite** from scrape |
-| Series-stamped fields | Respect field_sources / series ownership |
+| Series (`event_series_id` or `source = series_generated`) | **Never overwrite** from scrape |
+| `field_sources` `manual` or `series` | That field stays |
+| Venue, then artist | Only unlocked fields. Writes never include `status` or `deleted_at` |
 | Scrape | May create drafts / ingested_events; publish is a product decision |
 
 ## Scrape quality

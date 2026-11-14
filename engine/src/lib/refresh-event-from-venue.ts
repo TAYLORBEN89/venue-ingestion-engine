@@ -1,7 +1,13 @@
 /**
  * On re-fetch of a known show: update venue-controlled fields only.
  * POLICY: events with source = "manual" (built/edited in admin Event form) are never
- * touched — full curator ownership. Never overwrite fields marked field_sources manual.
+ * touched — full curator ownership. Never overwrite fields marked field_sources manual or series.
+ *
+ * Lock order: archived, trash, published lock, source=manual, series
+ * (event_series_id or series_generated), then per-field field_sources manual|series,
+ * then venue fields, then artist fields.
+ * Writes never include status or deleted_at. A published event is not rewritten
+ * unless refreshPublished is true, and it is never set back to draft.
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { FieldSources } from "./enrich-from-artist";
@@ -10,24 +16,27 @@ import type { MatchedPartnerEvent } from "./dedup";
 type FieldSource = FieldSources[keyof FieldSources];
 
 function isLocked(source: FieldSource | undefined): boolean {
-	// Manual edits are never clobbered. Artist-sourced fields stay unless still "artist".
-	return source === "manual";
+	// Manual edits and series-owned copy are never clobbered.
+	return source === "manual" || source === "series";
 }
 
 /**
- * Apply venue logistics from a re-fetched partner event onto a published events row.
+ * Apply venue logistics from a re-fetched partner event onto an events row.
  * Title is only updated when current field_sources.title is venue (or missing).
  * Manual events (source=manual): no-op — curated top-to-bottom wins.
+ * Published events: no-op unless opts.refreshPublished is true.
+ * Trashed rows (deleted_at set) are never restored.
  */
 export async function refreshPublishedEventFromVenue(
 	supabase: SupabaseClient,
 	eventId: string,
 	incoming: MatchedPartnerEvent,
+	opts?: { refreshPublished?: boolean },
 ): Promise<{ updated: boolean; reason?: string }> {
 	const { data: existing, error } = await supabase
 		.from("events")
 		.select(
-			"id, title, starts_at, ends_at, ticket_url, price_text, description, field_sources, status, source, event_series_id",
+			"id, title, starts_at, ends_at, ticket_url, price_text, description, field_sources, status, source, event_series_id, deleted_at",
 		)
 		.eq("id", eventId)
 		.maybeSingle();
@@ -38,12 +47,23 @@ export async function refreshPublishedEventFromVenue(
 	if (existing.status === "archived") {
 		return { updated: false, reason: "archived" };
 	}
-	// Manual / admin-curated events trump all automation
+	if (existing.deleted_at) {
+		return { updated: false, reason: "trashed" };
+	}
+	// Rescrapes never rewrite a published event, and never set one back to draft.
+	if (existing.status === "published" && opts?.refreshPublished !== true) {
+		return { updated: false, reason: "published_locked" };
+	}
+	// Manual / admin-curated events trump all automation.
+	// series_generated is not that lock. It is the machine series night, locked with the series.
 	if (String(existing.source || "") === "manual") {
 		return { updated: false, reason: "manual_event_locked" };
 	}
 	// Series-owned occurrences (parent recurring programs) never get scrape overwrites
-	if ((existing as { event_series_id?: string | null }).event_series_id) {
+	if (
+		String(existing.source || "") === "series_generated" ||
+		(existing as { event_series_id?: string | null }).event_series_id
+	) {
 		return { updated: false, reason: "series_event_locked" };
 	}
 
@@ -53,7 +73,7 @@ export async function refreshPublishedEventFromVenue(
 	};
 	const nextSources: FieldSources = { ...sources };
 
-	// Title: keep manual; otherwise keep venue title from re-fetch (never artist rename)
+	// Title: keep manual or series; otherwise keep venue title from re-fetch (never artist rename)
 	if (!isLocked(sources.title)) {
 		if (incoming.title && incoming.title !== existing.title) {
 			updates.title = incoming.title;

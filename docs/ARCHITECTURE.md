@@ -61,7 +61,7 @@
 2. **Fetch** partner events (adapter).  
 3. **Validate** title + date window (`scrapeDaysAhead`).  
 4. **Match** existing events (URL, partner id, fuzzy title+time).  
-5. **Write** review queue and/or update drafts.  
+5. **Write** the review queue. A published event is not rewritten (`refreshPublished: false`) and is never set back to draft.  
 6. Optional: artist catalog match, media upload, SEO fields.  
 7. **Finish** run with counts/errors.  
 

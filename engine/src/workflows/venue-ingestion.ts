@@ -100,15 +100,15 @@ export class VenueIngestionWorkflow extends WorkflowEntrypoint<CloudflareEnv, Ve
 							const id = parseSeatEngineEventIdFromSource(raw);
 							if (id) ids.add(id);
 						};
+						// ThinAir public.events has no source_url column.
 						const { data: published } = await supabase
 							.from("events")
-							.select("source_event_id, source_url, ticket_url")
+							.select("source_event_id, ticket_url")
 							.eq("venue_id", venueId)
 							.is("deleted_at", null)
 							.limit(2000);
 						for (const row of published ?? []) {
 							add(row.source_event_id as string | null);
-							add(row.source_url as string | null);
 							add(row.ticket_url as string | null);
 						}
 						const { data: staged } = await supabase
@@ -255,7 +255,9 @@ export class VenueIngestionWorkflow extends WorkflowEntrypoint<CloudflareEnv, Ve
 				matchPartnerEvents(supabase, venue.id, enriched),
 			);
 
-			// Re-fetch: update venue-owned fields on existing published events without clobbering manual locks
+			// Re-fetch: published events stay published. refreshPublished false means no rewrite
+			// and no status change back to draft. Manual, series, and per-field locks still apply
+			// when a non-published row is refreshed.
 			await step.do("refresh existing published events", async () => {
 				const { refreshPublishedEventFromVenue } = await import("../lib/refresh-event-from-venue");
 				const refreshes = matched.filter(
@@ -263,7 +265,9 @@ export class VenueIngestionWorkflow extends WorkflowEntrypoint<CloudflareEnv, Ve
 				);
 				for (const m of refreshes) {
 					if (!m.matched_event_id) continue;
-					await refreshPublishedEventFromVenue(supabase, m.matched_event_id, m);
+					await refreshPublishedEventFromVenue(supabase, m.matched_event_id, m, {
+						refreshPublished: false,
+					});
 				}
 				return refreshes.length;
 			});

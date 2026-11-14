@@ -7,6 +7,9 @@
 		"dev": "wrangler dev",
 		"deploy": "wrangler deploy",
 		"typecheck": "tsc --noEmit",
+		"check:hierarchy-schema": "node scripts/check-hierarchy-schema.mjs",
+		"check:published-lock": "node --experimental-strip-types scripts/check-published-lock.mjs",
+		"check:all": "npm run typecheck && npm run check:hierarchy-schema && npm run check:published-lock",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
 	},
 	"dependencies": {
